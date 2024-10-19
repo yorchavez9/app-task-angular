@@ -3,7 +3,9 @@ import { TasksService } from '../services/tasks.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-task-form',
+  selector: 'app-root',
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './task-form.component.html',
   styleUrls: ['./task-form.component.css'],
 })
