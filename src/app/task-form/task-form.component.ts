@@ -22,6 +22,12 @@ export class TaskFormComponent {
     this.taskService.createTask(this.task).subscribe(
       (response) => {
         console.log('Tarea creada exitosamente:', response);
+        // Limpiar el formulario restableciendo el objeto task
+        this.task = {
+          title: '',
+          description: '',
+          urgent: false,
+        };
       },
       (error) => {
         console.error('Error al crear la tarea:', error);

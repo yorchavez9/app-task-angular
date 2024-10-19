@@ -1,30 +1,31 @@
 <div class="container">
-    <div class="table-responsive border-4 mt-5">
-        <table class="table text-center">
+    <div class="table-responsive mt-5 table-container">
+        <table class="table  table-bordered">
             <thead class="table-primary">
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">N°</th>
                     <th scope="col">Título</th>
                     <th scope="col">Descripción</th>
-                    <th scope="col">Urgente</th>
+                    <th scope="col" class="text-center">Urgente</th>
                 </tr>
             </thead>
             <tbody>
                 @for (task of tasks; track $index) {
                 <tr>
-                    <td>{{$index}}</td>
-                    <td>{{task.title}}</td>
-                    <td>{{task.description}}</td>
-                    <td>
+                    <td data-label="#">{{$index}}</td>
+                    <td data-label="Título">{{task.title}}</td>
+                    <td data-label="Descripción">{{task.description}}</td>
+                    <td class="text-center" data-label="Urgente">
                         @if (task.urgent == 0) {
-                            <button class="btn btn-danger">No urgente</button>
-                        }@else{
-                            <button class="btn btn-success">Urgente</button>
+                        <button class="btn btn-danger btn-sm btn-urgente">no</button>
+                        } @else {
+                        <button class="btn btn-success btn-sm btn-no-urgente">si</button>
                         }
                     </td>
                 </tr>
                 }
             </tbody>
+
         </table>
     </div>
 </div>
