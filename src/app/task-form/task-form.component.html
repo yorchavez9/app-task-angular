@@ -1,0 +1,12 @@
+<form (ngSubmit)="onSubmit()">
+    <label for="title">Título:</label>
+    <input type="text" id="title" name="title" [(ngModel)]="task.title" required>
+
+    <label for="description">Descripción:</label>
+    <textarea id="description" name="description" [(ngModel)]="task.description" required></textarea>
+
+    <label for="urgent">Urgente:</label>
+    <input type="checkbox" id="urgent" name="urgent" [(ngModel)]="task.urgent">
+
+    <button type="submit">Crear Tarea</button>
+</form>

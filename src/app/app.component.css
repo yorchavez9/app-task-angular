@@ -1,0 +1,35 @@
+ nav {
+     background-color: #f8f9fa;
+     padding: 1rem;
+ }
+
+ ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     justify-content: center;
+     /* Centra los elementos */
+     gap: 1rem;
+ }
+
+ li a {
+     text-decoration: none;
+     padding: 0.5rem 1rem;
+     color: #007bff;
+     font-weight: 500;
+     transition: background-color 0.3s ease;
+ }
+
+ li a:hover {
+     background-color: #007bff;
+     color: white;
+     border-radius: 5px;
+ }
+/* styles.css o el archivo CSS correspondiente */
+.active {
+    font-weight: bold;
+    /* Hace que el texto sea más grueso */
+    color: blue;
+    /* Cambia el color del texto */
+}
